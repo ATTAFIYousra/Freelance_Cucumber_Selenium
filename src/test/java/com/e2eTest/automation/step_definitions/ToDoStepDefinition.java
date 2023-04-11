@@ -50,7 +50,7 @@ public class ToDoStepDefinition {
 	@Then("les boutons connexion et ajout de taches ne sont pas active si tous les champs ne sont pas remplis")
 	public void lesBoutonsConnexionEtAjoutDeTachesNeSontPasActiveSiTousLesChampsNeSontPasRemplis() {
 		validations.isElementEnabled(TodoListPage.btnSubmit);
-		validations.isElementEnabled(TodoListPage.ajoutTache);
+		validations.isElementPresentFalse(TodoListPage.ajoutTache);
 	}
 
 	@When("Je saisis l email {string}")

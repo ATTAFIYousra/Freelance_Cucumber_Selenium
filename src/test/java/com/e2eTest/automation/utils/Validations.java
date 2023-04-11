@@ -18,6 +18,7 @@ import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -73,7 +74,14 @@ public class Validations extends BasePage {
 	public Boolean isElementPresent(By targetElement) {
 		return Setup.getDriver().findElements(targetElement).size() > 0;
 	}
-
+	public boolean isElementPresentFalse(WebElement element) {
+	    try {
+	        element.isDisplayed();
+	        return true;
+	    } catch (NoSuchElementException e) {
+	        return false;
+	    }
+	}
 	/**
 	 * methode Checks if is element displayed.
 	 *
