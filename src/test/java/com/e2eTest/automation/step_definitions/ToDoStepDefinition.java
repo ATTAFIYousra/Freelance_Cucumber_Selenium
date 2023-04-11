@@ -42,8 +42,8 @@ public class ToDoStepDefinition {
 		seleniumUtils.writeText(TodoListPage.email, email);
 		seleniumUtils.writeText(TodoListPage.password, password);
 		seleniumUtils.click(TodoListPage.btnSubmit);
-		String Err = TodoListPage.allertMsg.getText();
-		validations.assertEquals(TodoListPage.allertMsg, Err);
+		String Err = TodoListPage.alertMsg.getText();
+		validations.assertEquals(TodoListPage.alertMsg, Err);
 
 	}
 

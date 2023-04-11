@@ -37,7 +37,7 @@ public class TodoListPage {
 	public static WebElement localStorage;
 	
 	@FindBy(how = How.XPATH, using = "(//div[@class='alert alert-danger'])[1]")
-	public static WebElement allertMsg;
+	public static WebElement alertMsg;
 	
 	
 	public TodoListPage() {
